@@ -2,7 +2,7 @@ const sections = [
   {
     title: "Nintendo",
     searchTerms: [
-      "switch",
+      "nintendo switch",
       "gamecube",
       "n64",
       "wii",
@@ -27,12 +27,10 @@ const sections = [
   {
     title: "Other Video Games",
     searchTerms: [
-      "360",
       "xbox",
-      "xbone",
-      "sega",
       "dreamcast",
-      "game gear",
+      "sega",
+      "atari",
     ]
   },
   {
