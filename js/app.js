@@ -86,32 +86,35 @@ function openAll(searchTerms) {
   searchTerms.forEach(searchTerm => window.open(`https://www.facebook.com/marketplace/category/search?daysSinceListed=${daysSinceListed}&sortBy=creation_time_descend&query=${searchTerm}&exact=true`));
 }
 
-function createSection(section)
-{
-  let div = document.createElement('div');
-  let title = document.createElement('h4');
+function createSection(section) {
   let button = document.createElement('div');
-
-  title.innerText = section.title;
   button.className = "button";
-  button.innerText = "Open All";
+  button.innerHTML = "&#128279;";
   button.addEventListener("click", () => openAll(section.searchTerms));
 
-  div.appendChild(title);
-  section.searchTerms.forEach(x => div.appendChild(createLink(x)));
-  div.appendChild(button);
+  let title = document.createElement('span');
+  title.innerText = section.title;
 
-  return div;
+  let summary = document.createElement('summary');
+  summary.appendChild(button);
+  summary.appendChild(title);
+
+  let details = document.createElement('details');
+  details.appendChild(summary);
+  section.searchTerms.forEach(x => details.appendChild(createLink(x)));
+
+  return details;
 }
 
 function createLink(searchTerm) {
-  let link = document.createElement('a');
-  let div = document.createElement('div');
 
-  link.href = `https://www.facebook.com/marketplace/category/search?daysSinceListed=${daysSinceListed}&sortBy=creation_time_descend&query=${searchTerm}&exact=true`;
-  link.target = "_blank";
+  let div = document.createElement('div');
+  div.className = "searchTerm";
   div.innerText = searchTerm;
 
+  let link = document.createElement('a');
+  link.href = `https://www.facebook.com/marketplace/category/search?daysSinceListed=${daysSinceListed}&sortBy=creation_time_descend&query=${searchTerm}&exact=true`;
+  link.target = "_blank";
   link.appendChild(div);
 
   return link;
