@@ -80,17 +80,26 @@ const linksElement = document.getElementById("links");
 
 sections.forEach(x => linksElement.appendChild(createSection(x)));
 
-function openAll(event, section) {
-  event.preventDefault();
-  localStorage.setItem(section.title, new Date().getTime());
-  section.searchTerms.forEach(searchTerm => window.open(`https://www.facebook.com/marketplace/category/search?daysSinceListed=${daysSinceListed}&sortBy=creation_time_descend&query=${searchTerm}&exact=true`));
+function openAll(event, searchTerms, key) {
+  event?.preventDefault();
+  if (key) {
+    localStorage.setItem(key, new Date().getTime());
+  }
+  searchTerms.forEach(searchTerm => window.open(`https://www.facebook.com/marketplace/category/search?daysSinceListed=${daysSinceListed}&sortBy=creation_time_descend&query=${searchTerm}&exact=true`));
 }
+
+function openCustom() {
+  let text = document.getElementById("custom").value;
+  let searchTerms = text.split(",").map(x => x.trim());
+  openAll(null, searchTerms);
+}
+
 
 function createSection(section) {
   let button = document.createElement('div');
   button.className = "button";
   button.innerHTML = "&#128279;";
-  button.addEventListener("click", (e) => openAll(e, section) );
+  button.addEventListener("click", (e) => openAll(e, section.searchTerms, section.title) );
 
   let title = document.createElement('span');
   title.className = "title";
