@@ -40,6 +40,10 @@ summary:hover {
     background-color: #059862;
 }
 
+.title {
+    min-width: 200px;
+}
+
 .searchTerm {
     padding: 10px 0px 10px 45px;
 }

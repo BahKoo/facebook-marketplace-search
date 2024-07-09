@@ -80,22 +80,29 @@ const linksElement = document.getElementById("links");
 
 sections.forEach(x => linksElement.appendChild(createSection(x)));
 
-function openAll(searchTerms) {
-  searchTerms.forEach(searchTerm => window.open(`https://www.facebook.com/marketplace/category/search?daysSinceListed=${daysSinceListed}&sortBy=creation_time_descend&query=${searchTerm}&exact=true`));
+function openAll(event, section) {
+  event.preventDefault();
+  localStorage.setItem(section.title, new Date().getTime());
+  section.searchTerms.forEach(searchTerm => window.open(`https://www.facebook.com/marketplace/category/search?daysSinceListed=${daysSinceListed}&sortBy=creation_time_descend&query=${searchTerm}&exact=true`));
 }
 
 function createSection(section) {
   let button = document.createElement('div');
   button.className = "button";
   button.innerHTML = "&#128279;";
-  button.addEventListener("click", () => openAll(section.searchTerms));
+  button.addEventListener("click", (e) => openAll(e, section) );
 
   let title = document.createElement('span');
+  title.className = "title";
   title.innerText = section.title;
+
+  let timer = document.createElement('span');
+  createTimer(section.title, timer);
 
   let summary = document.createElement('summary');
   summary.appendChild(button);
   summary.appendChild(title);
+  summary.appendChild(timer);
 
   let details = document.createElement('details');
   details.appendChild(summary);
@@ -117,3 +124,17 @@ function createLink(searchTerm) {
 
   return link;
 }
+
+
+function createTimer(title, timer) {
+  setInterval(function() {
+    let last = localStorage.getItem(title);
+    if (last) {
+      let now = new Date().getTime();
+      let distance = now - last;
+      timer.innerHTML = `[ ${Math.floor(distance / 1000 / 60)} mins ]`;
+    }
+  }, 1000);
+}
+
+
