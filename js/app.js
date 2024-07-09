@@ -41,13 +41,12 @@ const sections = [
     ]
   },
   {
-    title: "VR",
+    title: "Gym",
     searchTerms: [
-      "vr",
-      "vr2",
-      "psvr",
-      "oculus",
-      "meta"
+      "dumbbell",
+      "kettlebell",
+      "barbell",
+      "bowflex"
     ]
   },
   {
@@ -59,6 +58,16 @@ const sections = [
       "rigid",
       "bosch",
       "ryobi"
+    ]
+  },
+  {
+    title: "VR",
+    searchTerms: [
+      "vr",
+      "vr2",
+      "psvr",
+      "oculus",
+      "meta"
     ]
   },
   {
