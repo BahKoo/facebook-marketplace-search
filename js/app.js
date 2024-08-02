@@ -46,7 +46,8 @@ const sections = [
       "dumbbell",
       "kettlebell",
       "barbell",
-      "bowflex"
+      "bowflex",
+      "gym"
     ]
   },
   {
@@ -76,14 +77,13 @@ const sections = [
       "garage sale",
       "yard sale",
       "clearance sale",
-      "liquidation sale",
       "book sale",
       "sale"
     ]
   }
 ];
 
-const daysSinceListed = 7;
+const daysSinceListed = 1;
 
 const linksElement = document.getElementById("links");
 
