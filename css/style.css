@@ -12,6 +12,10 @@ h1 {
     margin: 10px 0;
 }
 
+#links2 {
+    margin: 100px 0;
+}
+
 summary {
     list-style: none;
     display: flex;

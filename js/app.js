@@ -21,6 +21,7 @@ const sections = [
       "ps5",
       "ps2",
       "ps3",
+      "ps1",
       "playstation",
     ]
   },
@@ -33,13 +34,13 @@ const sections = [
       "atari",
     ]
   },
-  {
-    title: "Toys",
-    searchTerms: [
-      "pokemon",
-      "amiibo"
-    ]
-  },
+  // {
+  //   title: "Toys",
+  //   searchTerms: [
+  //     "pokemon",
+  //     "amiibo"
+  //   ]
+  // },
   {
     title: "Gym",
     searchTerms: [
@@ -48,6 +49,13 @@ const sections = [
       "barbell",
       "bowflex",
       "gym"
+    ]
+  },
+  {
+    title: "Cell Phones",
+    searchTerms: [
+      "iphone",
+      "samsung galaxy"
     ]
   },
   {
@@ -72,6 +80,12 @@ const sections = [
     ]
   },
   {
+    title: "Vitamix",
+    searchTerms: [
+      "vitamix"
+    ]
+  },
+  {
     title: "Sales",
     searchTerms: [
       "garage sale",
@@ -83,11 +97,23 @@ const sections = [
   }
 ];
 
+const sections2 = [
+  {
+    title: "Temporary",
+    searchTerms: [
+      "service cart",
+      "hyperlite",
+    ]
+  },
+];
+
 const daysSinceListed = 1;
 
 const linksElement = document.getElementById("links");
-
 sections.forEach(x => linksElement.appendChild(createSection(x)));
+
+const links2Element = document.getElementById("links2");
+sections2.forEach(x => links2Element.appendChild(createSection(x)));
 
 function openAll(event, searchTerms, key) {
   event?.preventDefault();
