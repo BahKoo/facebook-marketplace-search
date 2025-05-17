@@ -107,8 +107,6 @@ const sections2 = [
   },
 ];
 
-const daysSinceListed = 1;
-
 const linksElement = document.getElementById("links");
 sections.forEach(x => linksElement.appendChild(createSection(x)));
 
@@ -120,7 +118,7 @@ function openAll(event, searchTerms, key) {
   if (key) {
     localStorage.setItem(key, new Date().getTime());
   }
-  searchTerms.forEach(searchTerm => window.open(`https://www.facebook.com/marketplace/category/search?daysSinceListed=${daysSinceListed}&sortBy=creation_time_descend&query=${searchTerm}&exact=true`));
+  searchTerms.forEach(searchTerm => window.open(`https://www.facebook.com/marketplace/winni/search?sortBy=creation_time_descend&query=${searchTerm}&exact=true`));
 }
 
 function openCustom() {
@@ -162,7 +160,7 @@ function createLink(searchTerm) {
   div.innerText = searchTerm;
 
   let link = document.createElement('a');
-  link.href = `https://www.facebook.com/marketplace/category/search?daysSinceListed=${daysSinceListed}&sortBy=creation_time_descend&query=${searchTerm}&exact=true`;
+  link.href = `https://www.facebook.com/marketplace/category/search?sortBy=creation_time_descend&query=${searchTerm}&exact=true`;
   link.target = "_blank";
   link.appendChild(div);
 
