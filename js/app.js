@@ -34,6 +34,14 @@ const sections = [
       "atari",
     ]
   },
+  {
+    title: "Valuable Video Games",
+    searchTerms: [
+      "pokémon",
+      "silent hill",
+      "fire emblem"
+    ]
+  },
   // {
   //   title: "Toys",
   //   searchTerms: [
@@ -51,58 +59,95 @@ const sections = [
       "gym"
     ]
   },
-  {
-    title: "Cell Phones",
-    searchTerms: [
-      "iphone",
-      "samsung galaxy"
-    ]
-  },
-  {
-    title: "Power Tools",
-    searchTerms: [
-      "dewalt",
-      "milwaukee",
-      "makita",
-      "rigid",
-      "bosch",
-      "ryobi"
-    ]
-  },
-  {
-    title: "VR",
-    searchTerms: [
-      "vr",
-      "vr2",
-      "psvr",
-      "oculus",
-      "meta"
-    ]
-  },
-  {
-    title: "Vitamix",
-    searchTerms: [
-      "vitamix"
-    ]
-  },
-  {
-    title: "Sales",
-    searchTerms: [
-      "garage sale",
-      "yard sale",
-      "clearance sale",
-      "book sale",
-      "sale"
-    ]
-  }
+  // {
+  //   title: "Cell Phones",
+  //   searchTerms: [
+  //     "iphone",
+  //     "samsung galaxy"
+  //   ]
+  // },
+  // {
+  //   title: "Power Tools",
+  //   searchTerms: [
+  //     "dewalt",
+  //     "milwaukee",
+  //     "makita",
+  //     "rigid",
+  //     "bosch",
+  //     "ryobi"
+  //   ]
+  // },
+  // {
+  //   title: "VR",
+  //   searchTerms: [
+  //     "vr",
+  //     "vr2",
+  //     "psvr",
+  //     "oculus",
+  //     "meta"
+  //   ]
+  // },
+  // {
+  //   title: "Vitamix",
+  //   searchTerms: [
+  //     "vitamix"
+  //   ]
+  // },
+  // {
+  //   title: "Sales",
+  //   searchTerms: [
+  //     "garage sale",
+  //     "yard sale",
+  //     "clearance sale",
+  //     "book sale",
+  //     "sale"
+  //   ]
+  // }
 ];
 
 const sections2 = [
   {
-    title: "Temporary",
+    title: "Vitamix",
     searchTerms: [
-      "service cart",
-      "hyperlite",
+      "vitamix",
+      "food cycler",
+      "thermomix",
+      "blendtec",
+    ]
+  },
+  {
+    title: "Dehydrators",
+    searchTerms: [
+      "dehydrator",
+      "excalibur",
+      "sedona",
+    ]
+  },
+  {
+    title: "Cell Phones",
+    searchTerms: [
+      "iphone",
+    ]
+  },
+  {
+    title: "Garden",
+    searchTerms: [
+      "tower garden",
+    ]
+  },
+  {
+    title: "Summer",
+    searchTerms: [
+      "canoe",
+      "seal line",
+      "sleeping bags",
+    ]
+  },
+  {
+    title: "Winter",
+    searchTerms: [
+      "capot",
+      "mukluks",
     ]
   },
 ];
